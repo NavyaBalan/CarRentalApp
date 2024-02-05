@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CarRentalModelStoreContainer" CdmEntityContainer="CarRentalEntities2">
+    <EntitySetMapping Name="TypesOfCars">
+      <EntityTypeMapping TypeName="IsTypeOf(CarRentalModel.TypesOfCar)">
+        <MappingFragment StoreEntitySet="TypesOfCars">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="VIN" ColumnName="VIN" />
+          <ScalarProperty Name="LicensePlateNumber" ColumnName="LicensePlateNumber" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarRentalRecords">
+      <EntityTypeMapping TypeName="IsTypeOf(CarRentalModel.CarRentalRecord)">
+        <MappingFragment StoreEntitySet="CarRentalRecord">
+          <ScalarProperty Name="TypesOfCarsId" ColumnName="TypesOfCarsId" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="DateReturned" ColumnName="DateReturned" />
+          <ScalarProperty Name="DateRented" ColumnName="DateRented" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="CarRentalModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="CarRentalModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRole">
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CarRentalModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
